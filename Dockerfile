@@ -22,7 +22,7 @@
 #                                                                       #
 #########################################################################
 
-FROM debian
+FROM toastie/x11-novnc:latest
 
 MAINTAINER mat231228 <mat231228@users.noreply.github.com>
 
@@ -36,8 +36,7 @@ ADD start-spotify.sh /usr/bin/start-spotify.sh
 RUN chmod +x /usr/bin/start-spotify.sh
 
 RUN useradd -d /home/spotify -p "!" -m -g audio -c "Docker-Spotify" spotify
-USER spotify
-
 VOLUME /home/spotify/
 
-ENTRYPOINT "/usr/bin/start-spotify.sh"
+COPY spotify.conf /etc/supervisor/conf.d/spotify.conf
+CMD ["/usr/bin/supervisord"]
