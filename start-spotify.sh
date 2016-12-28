@@ -31,4 +31,8 @@ yellow='\e[1;33m'
 NC='\e[0m' # No Color
 
 echo -e "${lpurp}Exiting! Goodbye${NC}"
+while :
+do
+	sleep 1
+done
 exit 0
