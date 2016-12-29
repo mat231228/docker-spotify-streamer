@@ -38,6 +38,5 @@ RUN chmod +x /usr/bin/start-spotify.sh
 RUN useradd -d /home/spotify -p "!" -m -g audio -c "Docker-Spotify" spotify
 VOLUME /home/spotify/
 
-COPY novnc.conf /etc/supervisor/conf.d/novnc.conf
 COPY spotify.conf /etc/supervisor/conf.d/spotify.conf
 CMD ["/usr/bin/supervisord"]
