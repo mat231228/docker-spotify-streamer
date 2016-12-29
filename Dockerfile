@@ -22,7 +22,7 @@
 #                                                                       #
 #########################################################################
 
-FROM toastie/x11-novnc:latest
+FROM mat231228/x11-novnc:latest
 
 MAINTAINER mat231228 <mat231228@users.noreply.github.com>
 
