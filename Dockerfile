@@ -31,6 +31,7 @@ RUN DEBIAN_FRONTEND=noninteractive echo deb http://repository.spotify.com stable
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install spotify-client
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install libpangoxft-1.0-0 libpangox-1.0-0 xauth pulseaudio
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install vlc
 
 ADD start-spotify.sh /usr/bin/start-spotify.sh
 RUN chmod +x /usr/bin/start-spotify.sh
