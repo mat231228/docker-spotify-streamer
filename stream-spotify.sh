@@ -2,7 +2,7 @@
 #
 # needs: Pulseaudio, VLC
 
-sleep 5s
+sleep 3s
 
 # Load null sink module if not already loaded
 pacmd list-sinks | grep steam 2>&1 >/dev/null
