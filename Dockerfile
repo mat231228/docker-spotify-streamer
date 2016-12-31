@@ -26,6 +26,9 @@ FROM matl/x11-novnc:latest
 
 MAINTAINER mat231228 <mat231228@users.noreply.github.com>
 
+# Expose Port
+EXPOSE 8081
+
 RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 RUN DEBIAN_FRONTEND=noninteractive echo deb http://repository.spotify.com stable non-free | tee /etc/apt/sources.list.d/spotify.list
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq
@@ -35,6 +38,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install vlc
 
 ADD start-spotify.sh /usr/bin/start-spotify.sh
 RUN chmod +x /usr/bin/start-spotify.sh
+
+ADD stream-spotify.sh /usr/bin/stream-spotify.sh
+RUN chmod +x /usr/bin/stream-spotify.sh
 
 RUN useradd -d /home/spotify -p "!" -m -g audio -c "Docker-Spotify" spotify
 VOLUME /home/spotify/
