@@ -10,4 +10,4 @@ A docker container to stream a [Spotify](https://www.spotify.com) instance on a 
 * Official Spotify package
 * Runs spotify as a normal user
 * Uses a volume for persistent config and cache (directory must be owned by user 1001:29)
-* Sends pulseaudio output to LAN as compressed stream
+* Sends pulseaudio output to LAN as compressed stream (thanks to djmaze/spotify-stream.sh)
