@@ -28,4 +28,4 @@ echo "Stop with CTRL-C"
 tput sgr0
 
 # Start VLC, serving the sink output as MP3 stream
-cvlc -q pulse://steam.monitor --sout "#transcode{acodec=mpga,ab=320,channels=2}:standard{access=http,dst=$IP:8081/pc.mp3}"
+cvlc -q pulse://steam.monitor --sout "#transcode{acodec=mp3,ab=320,channels=2}:standard{access=http,dst=$IP:8081/pc.mp3}"
