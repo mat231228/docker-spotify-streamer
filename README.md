@@ -1,13 +1,11 @@
-## **!!! WIP !!!**
-
-## **mat231228/spotify-streamer**
+## **spotify-streamer**
 
 A docker container to stream a [Spotify](https://www.spotify.com) instance on a LAN.
 
 ### **Features:**
 
-* Based on toastie/x11-novnc
-* Official Spotify package
-* Runs spotify as a normal user
+* Based on [matl/x11-novnc](https://hub.docker.com/r/matl/x11-novnc/)
+* Contains the official Spotify package
+* Runs as a normal user
 * Uses a volume for persistent config and cache (directory must be owned by user 1001:29)
-* Sends pulseaudio output to LAN as compressed stream (thanks to djmaze/spotify-stream.sh)
+* Streams pulseaudio output at http://ip_addr:8081/pc.mp3 (thanks to djmaze/spotify-stream.sh)
